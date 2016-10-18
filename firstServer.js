@@ -33,7 +33,9 @@ app.post('/test', function(req, res){
     res.send("Name is"+name+"\n Age is "+age);
 })
 
-app.listen(3000, function(){
+
+var port = process.env.PORT || 3000;
+app.listen(port, function(){
 
     console.log('Server listeneing to port 3000');
 });
